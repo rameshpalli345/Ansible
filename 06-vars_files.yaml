@@ -9,4 +9,4 @@
     
     - name: variable with input files message 2
       ansible.builtin.debug:
-        msg: " Hi This is ramesh, Working at {{Toyota Motor Europe}} and position is {{POSITION}}"
+        msg: " Hi This is ramesh, Working at {{COMPANY}} and position is {{POSITION}}"

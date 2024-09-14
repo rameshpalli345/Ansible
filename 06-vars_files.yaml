@@ -8,5 +8,5 @@
         msg: " Hi This is ramesh, learning {{COURSE}} and duration {{DURATION}}"
     
     - name: variable with input files message 2
-      anisble.builtin.debug:
+      ansible.builtin.debug:
         msg: " Hi This is ramesh, Working at {{Toyota Motor Europe}} and position is {{POSITION}}"

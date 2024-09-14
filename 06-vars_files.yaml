@@ -1,6 +1,6 @@
 - name: variables with input file
   hosts: web
-  var_files:
+  vars_files:
     -vars.yaml
   tasks:
     - name: variable with input file

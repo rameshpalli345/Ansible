@@ -4,3 +4,10 @@
   - name: PLAY-01 TASK-01
     ansible.builtin.debug:
      msg: "This is play01 task01"
+
+- name: PLAY-02
+  hosts: web
+  tasks: #list of tasks/modules/collections
+  - name: PLAY-02 TASK-02
+    ansible.builtin.ping:
+     msg: "This is play02 task02"

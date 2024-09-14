@@ -2,7 +2,7 @@
   hosts: web
   become: yes  #sudo access
   tasks: # install nginx and run on the server
-   - name: install nginx
-    ansible.bultin.package:
+  - name: install nginx
+    ansible.builtin.package:
       name: nginx
       state: present

@@ -10,4 +10,3 @@
   tasks: #list of tasks/modules/collections
   - name: PLAY-02 TASK-02
     ansible.builtin.ping:
-     msg: "This is play02 task02"

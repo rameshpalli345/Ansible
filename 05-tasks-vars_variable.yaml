@@ -9,15 +9,14 @@
       ansible.builtin.debug:
         msg: " Hi This is ramesh, learning {{COURSE}} and duration {{DURATION}}"
 
-
-  
-      - name: print the variable 2
-        vars: 
+    - name: print the variable 2
+      vars: 
           COMPANY: "TOYOTA MOTOR EUROPE"
           POSITION: "Technology lead"
-        ansible.builtin.debug:
+      ansible.builtin.debug:
           msg: " Hi This is ramesh, working in {{COMPANY}} and my position is {{POSITION}}"
-      - name: print the variable again
+
+     - name: print the variable again
         ansible.builtin.debug:
           msg: " Hi This is ramesh, learning {{COURSE}} and duration {{DURATION}}"
     

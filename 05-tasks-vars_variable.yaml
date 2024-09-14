@@ -15,6 +15,9 @@
           POSITION: "Technology lead"
       ansible.builtin.debug:
           msg: " Hi This is ramesh, working in {{COMPANY}} and my position is {{POSITION}}"
+    - name: print the variable again
+      ansible.builtin.debug:
+        msg: " Hi This is ramesh, learning {{COURSE}} and duration {{DURATION}}"
 
       
   

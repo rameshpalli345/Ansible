@@ -1,7 +1,7 @@
 - name: variables with input file
   hosts: web
   vars_files:
-    -vars.yaml
+    - vars.yaml
   tasks:
     - name: variable with input file
       ansible.builtin.debug:

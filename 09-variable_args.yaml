@@ -1,0 +1,6 @@
+- name: variable with arguments
+  hosts: web
+  tasks: 
+    - name: variable with arguments
+      ansible.builtin.debug:
+        msg: Hi This is  {{NAME}}, My comany is {{COMPANy}}

@@ -1,0 +1,11 @@
+- name: loops 
+  hosts: web
+  become: yes
+  tasks:
+    -name: sample loops
+     ansible.builtin.debug:
+      msg: "name of the person {{item}}"
+  loop:
+  - Ramesh
+  - Suresh
+  - Jason

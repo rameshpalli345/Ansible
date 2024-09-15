@@ -1,6 +1,6 @@
 - name: list the data types
   hosts: local
-  connections: local
+  connection: local
   vars:
     course: "Devops with AWS" # string
     duration: "120" #int

@@ -9,6 +9,7 @@
       - mysql
       - frontend
       - backed
+    zone: "crazymonk@online"
   tasks:
     - name: create EC2 instances
       amazon.aws.ec2_instance:
@@ -23,6 +24,19 @@
     - name: print the output
       ansible.builtin.debug:
         msg: "{{ec2_instances}}"
+    
+    # private IP address records
+    - name: create r53 records
+      amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}" #mysql.daws81s.online
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_instances.results }}"
      
     
     

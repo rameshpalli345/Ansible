@@ -1,0 +1,13 @@
+- name: install the software on the server
+  hosts: web
+  become: yes
+  tasks:
+    - name: install multiple softwaee
+      ansible.builtin.package:
+        name:  "{{item}}"
+        state:  present
+        
+      loop:
+      - mysql
+      - nginx
+      - httpd

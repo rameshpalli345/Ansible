@@ -3,4 +3,14 @@
   connection: local
   tasks:
     - name: command and shell difference
-      ansible.builtin.command: ls -ltr > /tmp/output.txt
+      ansible.builtin.shell: ls -ltr > /tmp/output.txt  # few commands will not work only shell will work 
+      # some of the items. but command more secure than shell
+      # commands will not work for redirections and piping and variables.
+    
+    - name: check the process
+      ansible.builtin.command: ps -ef | grep ssh
+      register: output
+
+
+
+    

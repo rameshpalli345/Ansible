@@ -1,0 +1,7 @@
+- name: gather the facts
+  hosts: web
+  become: yes
+  tasks:
+- name: Print the facts
+  ansible.builtin.package:
+    msg: "Print the gathered facts {{ansible_facts}}"  

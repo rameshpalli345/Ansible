@@ -32,11 +32,11 @@
       ansible.builtin.debug:
         msg: "min : {{ numbers | min }}  max : {{ numbers | max }} "
     
-    - name: print the unique number
+    - name: convert map to list
       vars:
          course:
           name: "Devops"
           Duration: "90 days"
       ansible.builtin.debug:
-         msg: "{{course | dcit2items}}"
+          msg: "{{ course | dict2items }}"
       

@@ -1,5 +1,5 @@
 - name: check expense user exists
-  hosts: web
+  hosts: local
   become: yes
   tasks:
   - name: check expense user exist or not

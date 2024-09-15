@@ -37,5 +37,5 @@
           COURSE: "Devops"
           Duration: "90 days"
       ansible.builtin.debug:
-          msg: "{{COURSE | dict2tems}}"
+          msg: "{{ COURSE | dict2items }}"
       

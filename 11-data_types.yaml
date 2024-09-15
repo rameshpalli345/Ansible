@@ -2,23 +2,23 @@
   hosts: local
   connections: local
   vars:
-  course: "Devops with AWS" # string
-  duration: 120 #int
-  topics:  # list
-   - git
-   - shell scripting
-   - Ansible
-   - Terraform
-   tools:   #map
-    CI: JENKINS
-    platform: AWS
-    CM: Ansible
-    AWS:
-     - EC2
-     - Route53
-     - Terraform
+    course: "Devops with AWS" # string
+    duration: "120" #int
+    topics:  # list
+      - git
+      - shell scripting
+      - Ansible
+      - Terraform
+    tools:   #map
+      CI: JENKINS
+      platform: AWS
+      CM: Ansible
+      AWS:
+        - EC2
+        - Route53
+        - Terraform
 
-    tasks:
+  tasks:
     - name: Print the data types
       ansible.builtin.debug:
         msg: "Hi , Iam learning {{course}} and duration is {{duration}} and topics are {{topics}} and tools are {{tools}}"

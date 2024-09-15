@@ -2,5 +2,5 @@
   hosts: local
   connection: local
   tasks:
-    - name: command vs shell
-      ansible.builtin.shell: ls-ltr > /tmp/output.txt
+    - name: command and shell difference
+      ansible.builtin.shell: ls -ltr > /tmp/output.txt

@@ -8,7 +8,7 @@
       # commands will not work for redirections and piping and variables.
     
     - name: check the process
-      ansible.builtin.command: ps -ef | grep ssh
+      ansible.builtin.shell: ps -ef | grep ssh
       register: output
 
 

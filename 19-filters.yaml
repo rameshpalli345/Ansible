@@ -31,4 +31,11 @@
         numbers: [ 1,2,45,37,57,139,3, 2,1 ]
       ansible.builtin.debug:
         msg: "min : {{ numbers | min }}  max : {{ numbers | max }} "
+    
+     - name: print the unique number
+      vars:
+        COURSE: "Devops"
+        Duration: "90 days"
+      ansible.builtin.debug:
+        msg: "{{COURSE | dict2tems}}"
       

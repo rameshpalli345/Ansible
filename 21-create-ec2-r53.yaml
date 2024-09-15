@@ -12,11 +12,11 @@
   tasks:
     - name: create EC2 instances
       amazon.aws.ec2_instance:
-       name: "{{item}}"
-       intsance_type: "t2.micro"
-       security_group: "{{sg_id}}"
-       vpc_subnet_id: "{{ subnet_id }}"
-       image_id: "{{ ami_id }}"
+        name: "{{item}}"
+        instance_type: "t2.micro"
+        security_group: "{{sg_id}}"
+        vpc_subnet_id: "{{ subnet_id }}"
+        image_id: "{{ ami_id }}"
       loop: "{{ instances }}"
       register: ec2_instances
      

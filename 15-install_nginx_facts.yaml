@@ -1,0 +1,21 @@
+- name: install nginx based on facts
+  hosts: web
+  become: yes
+  tasks:
+    - name: print the facts
+      ansible.buitlin.debug:
+        msg: {{ansible_facts}}
+    
+    - name: install nginx if it is redhat
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: install nginx if it is Debian
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+      when: ansible_os_family == "Debian"
+    
+

@@ -5,6 +5,7 @@
     - name: sample loops
       ansible.builtin.debug:
         msg: "name of the person {{item}}"
+        
       loop:
       - Ramesh
       - Suresh

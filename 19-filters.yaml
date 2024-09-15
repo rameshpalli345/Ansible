@@ -32,10 +32,10 @@
       ansible.builtin.debug:
         msg: "min : {{ numbers | min }}  max : {{ numbers | max }} "
     
-     - name: print the unique number
-       vars:
+    - name: print the unique number
+      vars:
           COURSE: "Devops"
           Duration: "90 days"
-       ansible.builtin.debug:
+      ansible.builtin.debug:
           msg: "{{COURSE | dict2tems}}"
       

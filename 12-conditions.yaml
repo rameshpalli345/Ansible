@@ -1,7 +1,7 @@
 - name: write the condition for numbers
   hosts: local
   connection: local
-  var_prompt: 
+  vars_prompt: 
     - name: number
       prompt: please enter the number
   tasks:

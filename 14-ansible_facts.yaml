@@ -2,6 +2,6 @@
   hosts: web
   become: yes
   tasks:
-- name: Print the facts
-  ansible.builtin.debug:
-    msg: "Print the gathered facts {{ansible_facts}}"  
+  - name: Print the facts
+    ansible.builtin.debug:
+      msg: "Print the gathered facts {{ansible_facts}}"  

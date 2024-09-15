@@ -9,7 +9,7 @@
       - mysql
       - frontend
       - backed
-    zone: "crazymonk@online"
+    zone: crazymonk@online
   tasks:
     - name: create EC2 instances
       amazon.aws.ec2_instance:
@@ -25,7 +25,7 @@
       ansible.builtin.debug:
         msg: "{{ec2_instances}}"
     
-    # private IP address records
+    
     - name: create r53 records
       amazon.aws.route53:
       state: present

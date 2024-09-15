@@ -34,8 +34,9 @@
     
     - name: print the unique number
       vars:
-          COURSE: "Devops"
+         course:
+          name: "Devops"
           Duration: "90 days"
       ansible.builtin.debug:
-          msg: "{{ COURSE | dict2items }}"
+         msg: "{{course | dcit2items}}"
       

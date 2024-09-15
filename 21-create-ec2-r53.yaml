@@ -1,0 +1,24 @@
+- name: create ec2 and r53 records
+  hosts: local
+  connection: local
+  vars:
+    sg_id: "sg-02641bad302eb8ebb"
+    ami_id: "ami-09c813fb71547fc4f"
+    subnet_id: "subnet-0804c53eefd80a4b1"
+    instances:
+      - mysql
+      - frontend
+      - backed
+  tasks:
+    - name: create EC2 instances
+      amazon.aws.ec2_instance:
+       name: "{{item}}"
+       intsance_type: "t2.micro"
+       security_group: "{{sg_id}}"
+       vpc_subnet_id:  "{{subnet_id}}"
+        image_id: {{ami_id}}
+    loop: "{{instances}}"
+    register: ec2_instances
+    
+    
+    

@@ -9,7 +9,7 @@
       - mysql
       - frontend
       - backed
-    zone: crazymonk@online
+    zone: crazymonk.online
   tasks:
     - name: create EC2 instances
       amazon.aws.ec2_instance:
